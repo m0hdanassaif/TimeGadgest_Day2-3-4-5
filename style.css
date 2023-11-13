@@ -1,0 +1,221 @@
+ 
+  @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+ 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: 100vh;
+}
+
+.clock {
+    background-color: #98c8f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle {
+    background-color: #badcbc;
+    width: 230px;
+    height: 230px;
+    border: 5px solid #65b168;
+    border-radius: 50%;
+}
+
+.hour,
+.minute,
+.second {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+}
+
+.needle {
+    position: absolute;
+    bottom: 68%;
+    transform-origin: 50% 100%;
+}
+
+.hr {
+    background: #000000;
+    left: 106px;
+    width: 5px;
+    height: 80px;
+    border-radius: 10px 10px 0 0;
+    animation: rotateHand 43200s linear infinite;
+}
+
+.min {
+    background: #fc4646;
+    left: 106px;
+    width: 5px;
+    height: 80px;
+    border-radius: 10px 10px 0 0;
+    animation: rotateHand 43200s linear infinite;
+    transform: rotate(30deg)
+}
+
+.sec {
+    background: #65b168;
+    left: 106px;
+    width: 5px;
+    height: 80px;
+    border-radius: 10px 10px 0 0;
+    animation: rotateHand 60s linear infinite;
+}
+
+@keyframes rotateHand {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.numbers {
+    top: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    top: 9.7%;
+    left: 24.7%;
+    transform: translate(-50%, -50%);
+}
+
+.number {
+    position: absolute;
+    transform-origin: 50% 62%;
+    height: 170px;
+}
+
+.number span {
+    display: block;
+
+}
+
+.number:nth-of-type(1) {
+    transform: rotate(30deg);
+}
+
+.number:nth-of-type(1) span {
+    transform: rotate(-30deg);
+}
+
+.number:nth-of-type(2) {
+    transform: rotate(60deg);
+}
+
+.number:nth-of-type(2) span {
+    transform: rotate(-60deg);
+}
+
+.number:nth-of-type(3) {
+    transform: rotate(90deg);
+}
+
+.number:nth-of-type(3) span {
+    transform: rotate(-90deg);
+}
+
+.number:nth-of-type(4) {
+    transform: rotate(120deg);
+}
+
+.number:nth-of-type(4) span {
+    transform: rotate(-120deg);
+}
+
+.number:nth-of-type(5) {
+    transform: rotate(150deg);
+}
+
+.number:nth-of-type(5) span {
+    transform: rotate(-150deg);
+}
+
+.number:nth-of-type(6) {
+    transform: rotate(180deg);
+}
+
+.number:nth-of-type(6) span {
+    transform: rotate(-180deg);
+}
+
+.number:nth-of-type(7) {
+    transform: rotate(210deg);
+}
+
+.number:nth-of-type(7) span {
+    transform: rotate(-210deg);
+}
+
+.number:nth-of-type(8) {
+    transform: rotate(240deg);
+}
+
+.number:nth-of-type(8) span {
+    transform: rotate(-240deg);
+}
+
+.number:nth-of-type(9) {
+    transform: rotate(270deg);
+}
+
+.number:nth-of-type(9) span {
+    transform: rotate(-270deg);
+}
+
+.number:nth-of-type(10) {
+    transform: rotate(300deg);
+}
+
+.number:nth-of-type(10) span {
+    transform: rotate(-300deg);
+}
+
+.number:nth-of-type(11) {
+    transform: rotate(330deg);
+}
+
+.number:nth-of-type(11) span {
+    transform: rotate(-330deg);
+}
+
+.number:nth-of-type(12) {
+    transform: rotate(360deg);
+}
+
+.number:nth-of-type(12) span {
+    transform: rotate(-360deg);
+}
+
+
+
+.alaram {
+    background-color: #afb28e;
+}
+
+.timer {
+    background-color: #ff8985;
+}
+
+.stopwatch {
+    background-color: #738385;
+}
+
+.secondday{
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    color: #e7faef4d;
+    font-size: 1rem;
+}
